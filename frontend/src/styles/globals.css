@@ -1,0 +1,92 @@
+/* ── Smart Apply — Design System ─────────────────────────────── */
+
+:root {
+  /* Light mode (default) */
+  --bg:            #f7f8fc;
+  --bg-card:       #ffffff;
+  --bg-elevated:   #f0f2f8;
+  --bg-sunken:     #eceef5;
+  --border:        #dde0ec;
+  --border-subtle: #e8eaf3;
+
+  --text:     #111827;
+  --text-2:   #4b5563;
+  --text-3:   #9ca3af;
+  --text-inv: #ffffff;
+
+  --accent:     #6c63ff;
+  --accent-2:   #5046e5;
+  --accent-dim: rgba(108,99,255,0.15);
+  --accent-bg:  rgba(108,99,255,0.07);
+
+  --status-applied:   #7c3aed;
+  --status-awaiting:  #ea580c;
+  --status-interview: #0284c7;
+  --status-offer:     #16a34a;
+  --status-rejected:  #dc2626;
+
+  --font-display: 'Plus Jakarta Sans', sans-serif;
+  --font-mono:    'JetBrains Mono', monospace;
+
+  --radius-sm: 8px;
+  --radius:    12px;
+  --radius-lg: 18px;
+
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.07), 0 0 0 1px rgba(0,0,0,0.04);
+  --shadow:    0 4px 16px rgba(0,0,0,0.08);
+  --shadow-lg: 0 8px 32px rgba(0,0,0,0.12);
+}
+
+/* Dark mode — toggled via data-theme="dark" on <html> */
+[data-theme="dark"] {
+  --bg:            #0f1117;
+  --bg-card:       #181c27;
+  --bg-elevated:   #1e2233;
+  --bg-sunken:     #0b0d13;
+  --border:        #2a2f42;
+  --border-subtle: #1f2336;
+
+  --text:     #eef0f6;
+  --text-2:   #9ba3bf;
+  --text-3:   #5c6484;
+  --text-inv: #0f1117;
+
+  --accent:     #6c63ff;
+  --accent-2:   #8b85ff;
+  --accent-dim: rgba(108,99,255,0.2);
+  --accent-bg:  rgba(108,99,255,0.08);
+
+  --status-applied:   #a78bfa;
+  --status-awaiting:  #fb923c;
+  --status-interview: #38bdf8;
+  --status-offer:     #4ade80;
+  --status-rejected:  #f87171;
+
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.3), 0 0 0 1px rgba(255,255,255,0.03);
+  --shadow:    0 4px 20px rgba(0,0,0,0.4);
+  --shadow-lg: 0 8px 40px rgba(0,0,0,0.5);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html, body, #root { height: 100%; }
+
+body {
+  font-family: var(--font-display);
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+a { color: inherit; text-decoration: none; }
+button { font-family: var(--font-display); cursor: pointer; border: none; background: none; }
+input, textarea, select { font-family: var(--font-display); }
+
+::-webkit-scrollbar       { width: 5px; }
+::-webkit-scrollbar-track { background: var(--bg-sunken); }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--text-3); }
+
+.mono   { font-family: var(--font-mono); }
+.accent { color: var(--accent); }

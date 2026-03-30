@@ -1,0 +1,13 @@
+{
+  "name": "smart-apply",
+  "private": true,
+  "scripts": {
+    "frontend": "cd frontend && npm run dev",
+    "backend": "cd backend && ./venv/bin/python run.py",
+    "dev": "npx concurrently -n frontend,backend -c cyan,yellow \"cd frontend && npm run dev\" \"cd backend && ./venv/bin/python run.py\"",
+    "install:frontend": "cd frontend && npm install"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.0"
+  }
+}
