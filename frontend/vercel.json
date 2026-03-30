@@ -2,7 +2,7 @@
   "rewrites": [
     {
       "source": "/api/:path*",
-      "destination": "https://smart-apply-okwp.onrender.com"
+      "destination": "https://smart-apply-okwp.onrender.com/:path*"
     }
   ]
 }
