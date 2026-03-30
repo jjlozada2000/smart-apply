@@ -21,7 +21,7 @@ interface Job {
   posted_at: string
   salary_min: number | null
   salary_max: number | null
-  salary_currency: string
+  salary__currency: string
   salary_period: string | null
   company_logo: string | null
   publisher: string
@@ -70,7 +70,7 @@ const SORT_OPTIONS: Record<string, { value: string; label: string }[]> = {
   ],
 }
 
-function formatSalary(min: number | null, max: number | null, currency: string, period: string | null) {
+function formatSalary(min: number | null, max: number | null, _currency: string, period: string | null) {
   if (!min && !max) return null
   const fmt = (n: number) => n >= 1000 ? `$${(n / 1000).toFixed(0)}k` : `$${n}`
   const per = period === 'YEAR' ? '/yr' : period === 'HOUR' ? '/hr' : ''

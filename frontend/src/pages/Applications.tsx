@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { applicationsApi, Application } from '../services/api'
-import { Button, Card, StatusBadge, Modal, Input, Select, Textarea, EmptyState, ConfirmModal } from '../components/ui'
+import { Button, Card, Modal, Input, Select, Textarea, EmptyState, ConfirmModal } from '../components/ui'
 
 const PAGE: React.CSSProperties = {
   padding: '48px 52px 64px',
