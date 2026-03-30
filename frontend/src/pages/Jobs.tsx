@@ -21,7 +21,7 @@ interface Job {
   posted_at: string
   salary_min: number | null
   salary_max: number | null
-  salary__currency: string
+  salary_currency: string
   salary_period: string | null
   company_logo: string | null
   publisher: string
