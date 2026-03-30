@@ -35,7 +35,7 @@ def google_login():
     auth_url, _ = flow.authorization_url(
         access_type='offline',
         include_granted_scopes='true',
-        prompt='consent',          # always show consent so we get refresh_token
+        prompt='select_account consent',          # always show consent so we get refresh_token
     )
     return jsonify({'auth_url': auth_url})
 
