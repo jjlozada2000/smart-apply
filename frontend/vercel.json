@@ -3,6 +3,10 @@
     {
       "source": "/api/:path*",
       "destination": "https://smart-apply-okwp.onrender.com/:path*"
+    },
+    {
+      "source": "/((?!api).*)",
+      "destination": "/index.html"
     }
   ]
 }
